@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { useGlobalState } from "../zustand/GlobalState";
 
 export const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
+  const add = useGlobalState((state) => state.add);
+
   return (
     <div>
       <h3>Add new transaction</h3>
-      <form>
+
+      <div>
         <div className="form-control">
           <label htmlFor="text">Text</label>
           <input
@@ -17,20 +21,37 @@ export const AddTransaction = () => {
             placeholder="Enter text"
           />
         </div>
+
         <div className="htmlForm-control">
           <label for="amount">
             Amount <br />
-            (Negative - IncomeExpenses, Positive - Income)
           </label>
+
           <input
             type="number"
             value={amount}
             onChange={(amount) => setAmount(amount.target.value)}
             placeholder="Enter amount"
-          ></input>
-          <button className="btn">Add transaction</button>
+          />
+
+          <small for="amount">
+            Negative: Income Expenses, Positive: Income
+          </small>
+
+          <button
+            className="btn"
+            onClick={() =>
+              add({
+                id: Math.floor(Math.random() * 100000000),
+                text,
+                amount,
+              })
+            }
+          >
+            Add transaction
+          </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

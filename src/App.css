@@ -6,6 +6,7 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -113,6 +114,7 @@ input[type="number"] {
 }
 
 .list li {
+  text-transform: capitalize;
   background-color: #fff;
   box-shadow: var(--box-shadow);
   color: #333;
