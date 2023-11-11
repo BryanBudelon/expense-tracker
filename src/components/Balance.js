@@ -7,9 +7,9 @@ export const Balance = () => {
   const total = all.reduce((n, { amount }) => Number(n) + Number(amount), 0);
 
   return (
-    <>
+    <div className="container">
       <h4>Your Balance</h4>
       <h1>{formatCurrency.format(total)}</h1>
-    </>
+    </div>
   );
 };

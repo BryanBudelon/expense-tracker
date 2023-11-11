@@ -12,6 +12,8 @@
 body {
   background-color: #f7f7f7;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -22,6 +24,9 @@ body {
 }
 
 .container {
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+  }
   margin: 30px auto;
   width: 400px;
 }
@@ -91,11 +96,13 @@ input[type="number"] {
   }
   -moz-appearance: textfield;
   /* border: 1px solid #dedede; */
+
   border-radius: 2px;
   display: block;
   font-size: 16px;
   padding: 10px;
-  width: 100%;
+
+  width: 30em;
   border: none;
   border-bottom: 1px solid #dedede;
   outline: none;
@@ -168,6 +175,7 @@ input[type="number"] {
 
 .incomeBtn {
   background-color: #2ecc71;
+  display: inline-block;
   border: 0;
   border-radius: 5px;
   padding: 2px 5px;
@@ -176,6 +184,11 @@ input[type="number"] {
   box-shadow: var(--box-shadow);
   width: 45%;
   margin: 1em;
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.5em 0;
+  }
 }
 .expenseBtn {
   background-color: #c0392b;
@@ -186,4 +199,9 @@ input[type="number"] {
   color: white;
   box-shadow: var(--box-shadow);
   width: 45%;
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.5em;
+  }
 }

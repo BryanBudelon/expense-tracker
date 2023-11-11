@@ -27,7 +27,7 @@ export function AddIncome() {
         type="text"
         inputMode="numeric"
         pattern="[0-9]*"
-        value={amount}
+        value={amount != 0 ? amount : ""}
         onChange={(amount) => setAmount(amount.target.value)}
         placeholder="Amount"
       ></input>
