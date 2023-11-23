@@ -1,6 +1,9 @@
 import React from "react";
 import { useGlobalState } from "../zustand/GlobalState";
 import { formatCurrency } from "../utils/format";
+import { UIIncExpView } from "./IncExpView";
+import { Money } from "./Money";
+import { UIIncText } from "./Text";
 
 export const IncomeExpenses = () => {
   const all = useGlobalState((state) => state.transactions);
@@ -18,16 +21,17 @@ export const IncomeExpenses = () => {
   );
 
   return (
-    <div className="inc-exp-container">
+    <UIIncExpView>
       <div>
         <h4>Income</h4>
-        <p className="money plus">{formatCurrency.format(totalIncomes)}</p>
+        <Money type="plus">{formatCurrency.format(totalIncomes)}</Money>
+        {/* <p className="money plus">{formatCurrency.format(totalIncomes)}</p> */}
       </div>
 
       <div>
         <h4>Expense</h4>
-        <p className="money minus">{formatCurrency.format(totalExpenses)}</p>
+        <Money type="minus">{formatCurrency.format(totalExpenses)}</Money>
       </div>
-    </div>
+    </UIIncExpView>
   );
 };

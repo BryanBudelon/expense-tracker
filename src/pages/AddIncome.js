@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useGlobalState } from "../zustand/GlobalState";
 import { useNavigate } from "react-router-dom";
+import { AddButton } from "../components/Button";
+import { UIIncomePage } from "../components/IncomePage";
+import { UIInput } from "../components/Input";
+import { GlobalStyle } from "../utils/GlobalStyle";
 
 export function AddIncome() {
   const [text, setText] = useState("");
@@ -11,28 +15,31 @@ export function AddIncome() {
 
   const add = useGlobalState((state) => state.add);
   return (
-    <div>
+    <UIIncomePage>
+      <GlobalStyle />
+
       <h2>Adding Income</h2>
       <p>Description</p>
-      <input
+
+      <UIInput
         type="text"
         className="txText"
         value={text}
         onChange={(text) => setText(text.target.value)}
         placeholder="Description"
-      ></input>
+      ></UIInput>
       <p>Amount</p>
-      <input
+
+      <UIInput
         className="txAmount"
         type="text"
         inputMode="numeric"
         pattern="[0-9]*"
-        value={amount != 0 ? amount : ""}
+        value={amount !== 0 ? amount : ""}
         onChange={(amount) => setAmount(amount.target.value)}
         placeholder="Amount"
-      ></input>
-      <button
-        className="btn"
+      ></UIInput>
+      <AddButton
         onClick={() => {
           add({
             id: Math.floor(Math.random() * 100000000),
@@ -43,7 +50,7 @@ export function AddIncome() {
         }}
       >
         Add
-      </button>
-    </div>
+      </AddButton>
+    </UIIncomePage>
   );
 }

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home.js";
 import { AddIncome } from "./pages/AddIncome.js";
 import { AddExpense } from "./pages/AddExpense.js";
+import "./fonts/fonts.css";
 
 function App() {
   return (

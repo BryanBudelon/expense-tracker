@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -7,9 +7,9 @@
 * {
   box-sizing: border-box;
   user-select: none;
-}
+} */
 
-body {
+/* body {
   background-color: #f7f7f7;
   display: flex;
   flex-wrap: wrap;
@@ -21,17 +21,27 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   font-size: 18px;
-}
+} */
 
-.container {
+/* .container {
   @media only screen and (max-width: 700px) {
     width: 100%;
   }
   margin: 30px auto;
   width: 400px;
-}
+} */
+/* .addIncomeContainer {
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  width: 400px;
 
-h1 {
+  @media only screen and (max-width: 700px) {
+    width: 80%;
+  }
+} */
+
+/* h1 {
   letter-spacing: 1px;
   margin: 0;
 }
@@ -45,9 +55,9 @@ h3 {
 h4 {
   margin: 0;
   text-transform: uppercase;
-}
+} */
 
-.inc-exp-container {
+/* .inc-exp-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   padding: 20px;
@@ -63,53 +73,56 @@ h4 {
 
 .inc-exp-container > div:first-of-type {
   border-right: 1px solid #dedede;
-}
+} */
 
-.money {
+/* .money {
   font-size: 20px;
   letter-spacing: 1px;
   margin: 5px 0;
-}
+} */
 
-.money.plus {
+/* .money.plus {
   color: #2ecc71;
 }
 
 .money.minus {
   color: #c0392b;
-}
+} */
 
-label {
+/* label {
   display: inline-block;
   margin: 10px 0;
-}
+} */
 
-input[type="text"],
+/* input[type="text"],
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
-  /* Optional styles to remove the up and down arrows in different browsers */
+   Optional styles to remove the up and down arrows in different browsers 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
   -moz-appearance: textfield;
-  /* border: 1px solid #dedede; */
+  border: 1px solid #dedede;
 
   border-radius: 2px;
   display: block;
   font-size: 16px;
-  padding: 10px;
+  padding: 5px;
 
   width: 30em;
   border: none;
   border-bottom: 1px solid #dedede;
   outline: none;
   background-color: #f7f7f7;
-}
+  @media only screen and (max-width: 700px) {
+    width: 80%;
+  }
+} */
 
-.btn {
+/* .btn {
   cursor: pointer;
   background-color: #9c88ff;
   box-shadow: var(--box-shadow);
@@ -117,17 +130,21 @@ input[type="number"] {
   border: 0;
   display: block;
   font-size: 16px;
-  margin: 10px 0 30px;
+  margin: 2em;
   padding: 10px;
-  width: 100%;
+  width: 25em;
+  @media only screen and (max-width: 700px) {
+    margin: 0.5em;
+    width: 80%;
+  }
 }
 
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
-}
+} */
 
-.list {
+/* .list {
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
@@ -151,9 +168,9 @@ input[type="number"] {
 
 .list li.minus {
   border-right: 5px solid #c0392b;
-}
+} */
 
-.delete-btn {
+/* .delete-btn {
   cursor: pointer;
   background-color: #e74c3c;
   border: 0;
@@ -167,13 +184,13 @@ input[type="number"] {
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} */
 
-.list li:hover .delete-btn {
+/* .list li:hover .delete-btn {
   opacity: 1;
-}
+} */
 
-.incomeBtn {
+/* .incomeBtn {
   background-color: #2ecc71;
   display: inline-block;
   border: 0;
@@ -204,4 +221,4 @@ input[type="number"] {
     margin: 1em 0;
     padding: 0.5em;
   }
-}
+} */

@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useGlobalState } from "../zustand/GlobalState";
+import { UIInput } from "../components/Input";
+import { AddButton } from "../components/Button";
+import { UIIncomePage } from "../components/IncomePage";
+import { GlobalStyle } from "../utils/GlobalStyle";
 
 export function AddExpense() {
   const [text, setText] = useState("");
@@ -12,23 +16,24 @@ export function AddExpense() {
 
   const add = useGlobalState((state) => state.add);
   return (
-    <div>
-      <h2>Adding Income</h2>
+    <UIIncomePage>
+      <GlobalStyle />
+      <h2>Adding Expense</h2>
       <p>Description</p>
-      <input
+      <UIInput
         type="text"
         value={text}
         onChange={(text) => setText(text.target.value)}
         placeholder="Description"
-      ></input>
+      ></UIInput>
       <p>Amount</p>
-      <input
+      <UIInput
         type="number"
         value={amount}
         onChange={(amount) => setAmount(amount.target.value)}
         placeholder="Amount"
-      ></input>
-      <button
+      ></UIInput>
+      <AddButton
         className="btn"
         onClick={() => {
           add({
@@ -40,7 +45,7 @@ export function AddExpense() {
         }}
       >
         Add
-      </button>
-    </div>
+      </AddButton>
+    </UIIncomePage>
   );
 }
